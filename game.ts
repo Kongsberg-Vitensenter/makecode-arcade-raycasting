@@ -50,10 +50,16 @@ namespace fpsGame {
         game.onUpdateInterval(50, function () {
             if (controller.anyButton.isPressed()) {
                 if (controller.left.isPressed()) {
-                    fpsGame.player.rotateDegreesToLeft(config.rotationStep)
+                    if (controller.B.isPressed())
+                        fpsGame.player.strafeLeft(config.moveStep)
+                    else
+                        fpsGame.player.rotateDegreesToLeft(config.rotationStep)
                 }
                 if (controller.right.isPressed()) {
-                    fpsGame.player.rotateDegreesToRight(config.rotationStep)
+                    if (controller.B.isPressed())
+                        fpsGame.player.strafeRight(config.moveStep)
+                    else
+                        fpsGame.player.rotateDegreesToRight(config.rotationStep)
                 }
                 if (controller.up.isPressed()) {
                     fpsGame.player.moveForward(config.moveStep)

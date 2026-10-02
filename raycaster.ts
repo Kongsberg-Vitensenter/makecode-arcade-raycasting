@@ -11,10 +11,7 @@ class Ray {
 
     constructor(player: fpsPlayer, angle: number, maxDrawingDistance: number) {
         this.player = player
-        angle = angle % (2 * Math.PI)
-        if (angle < 0)
-            angle = (2 * Math.PI) + angle
-        this.angle = angle
+        this.angle = util.normalizeAngle(angle)
         this.facingDown = this.angle > 0 && this.angle < Math.PI
         this.facingRight = this.angle < 0.5 * Math.PI || this.angle > 1.5 * Math.PI
         this.maxDrawingDistance = maxDrawingDistance

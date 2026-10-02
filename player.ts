@@ -17,11 +17,11 @@ class fpsPlayer {
     }
 
     setRotationAngleInRadians(radians: number) {
-        radians = radians % (2 * Math.PI)
-        if (radians < 0)
-            radians = (2 * Math.PI) + radians
-        this.rotationAngle = radians
+        
+        this.rotationAngle = util.normalizeAngle(radians)
     }
+
+    
 
     getRotationAngleInDegrees(): number {
         return this.rotationAngle * (180 / Math.PI)
@@ -33,6 +33,26 @@ class fpsPlayer {
 
     rotateDegreesToLeft(degrees: number) {
         this.setRotationAngleInDegrees(this.getRotationAngleInDegrees() - degrees)
+    }
+
+    strafeLeft(distance: number) {
+        let newX = this.x + Math.cos(this.rotationAngle - Math.PI / 2) * distance
+        let newY = this.y + Math.sin(this.rotationAngle - Math.PI / 2) * distance
+
+        if (this.map.tileAtCoords(newX, newY) == 0) {
+            this.x = newX
+            this.y = newY
+        }
+    }
+
+    strafeRight(distance: number) {
+        let newX = this.x + Math.cos(this.rotationAngle + Math.PI / 2) * distance
+        let newY = this.y + Math.sin(this.rotationAngle + Math.PI / 2) * distance
+
+        if (this.map.tileAtCoords(newX, newY) == 0) {
+            this.x = newX
+            this.y = newY
+        }
     }
 
     rotateDegreesToRight(degrees: number) {

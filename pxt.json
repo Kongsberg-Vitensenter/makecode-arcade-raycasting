@@ -16,7 +16,8 @@
         "map.ts",
         "player.ts",
         "raycaster.ts",
-        "game.ts"
+        "game.ts",
+        "util.ts"
     ],
     "testFiles": [
         "test.ts"
