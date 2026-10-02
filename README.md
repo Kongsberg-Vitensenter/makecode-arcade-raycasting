@@ -13,7 +13,7 @@
  keeping the resolution default and the number of rays cast low.
 
 
-> Open this page at [https://vegardw.github.io/makecode-arcade-raycasting/](https://vegardw.github.io/makecode-arcade-raycasting/)
+> Open this page at [https://kongsberg-vitensenter.github.io/makecode-arcade-raycasting/](https://kongsberg-vitensenter.github.io/makecode-arcade-raycasting/)
 
 ## Use as Extension
 
