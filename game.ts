@@ -61,7 +61,7 @@ namespace fpsGame {
                 if (controller.down.isPressed()) {
                     fpsGame.player.moveBackward(config.moveStep)
                 }
-                if (controller.B.isPressed()) {
+                if (controller.B.isPressed() && controller.B.isPressed()) {
                     if (config.view == ViewTypes.view3D)
                         config.view = ViewTypes.view2D
                     else

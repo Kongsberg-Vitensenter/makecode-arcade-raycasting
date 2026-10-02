@@ -12,8 +12,14 @@
  But to keep it running smoothly and correctly on actual hardware I reccomend 
  keeping the resolution default and the number of rays cast low.
 
+ ## How to Play
+ * Move the player with the d-pad
+ * Press A and B buttons simultaneously to switch between 3D view and a 2D view showing the map, player and rays cast from above. 
+ The 2D view will only show the 160x120 positions in the top left map (equals 10x7.5 tiles with the default tile size of 16)
 
-> Open this page at [https://kongsberg-vitensenter.github.io/makecode-arcade-raycasting/](https://kongsberg-vitensenter.github.io/makecode-arcade-raycasting/)
+
+Open this page at [https://kongsberg-vitensenter.github.io/makecode-arcade-raycasting/](https://kongsberg-vitensenter.github.io/makecode-arcade-raycasting/)
+to play the game online.
 
 ## Use as Extension
 
