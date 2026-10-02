@@ -23,7 +23,7 @@ namespace config {
     // Raycasting / rendering configuration
     export let fov = 60
     export let rays = 40
-    export let maxDrawingDistance = 12
+    export let maxDrawingDistance = 20
 
     // debug flag
     export let debug = false
