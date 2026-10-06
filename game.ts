@@ -22,6 +22,14 @@ namespace fpsGame {
             1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
             1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
         ]
+        map.textures_h = [
+            image.create(16,16),
+            assets.tile`wall1_h`
+        ]
+        map.textures_v = [
+            image.create(16, 16),
+            assets.tile`wall1_v`
+        ]
     }
 
     // Set up player

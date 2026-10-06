@@ -3,6 +3,13 @@ enum ViewTypes {
     view3D
 }
 
+// uncomment below to change resolution on simulator
+// Does not change resolution on actual hardware
+/*namespace userconfig {
+    export const ARCADE_SCREEN_WIDTH = 320;
+    export const ARCADE_SCREEN_HEIGHT = 240;
+}*/
+
 
 namespace config {
     // Viewport configuration
@@ -24,6 +31,7 @@ namespace config {
     export let fov = 60
     export let rays = 40
     export let maxDrawingDistance = 20
+    export let textures = false
 
     // debug flag
     export let debug = false

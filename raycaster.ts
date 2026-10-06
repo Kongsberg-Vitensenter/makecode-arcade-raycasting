@@ -141,14 +141,24 @@ class RayCaster {
     }
 
     render3D(image: Image) {
-        let lineWidth = config.viewportWidth / this.rayNumber
+        let tileSize = this.player.map.tileSize
+        let lineWidth = Math.floor(config.viewportWidth / this.rayNumber)+1
         for (let i = 0; i < this.rays.length; i++) {
-            let lineHeight = (this.player.map.tileSize / this.rays[i].lenght) * this.viewDistance
-            if (this.rays[i].horizontalhit)
-                image.fillRect(lineWidth * i, config.viewportHeight / 2 - lineHeight / 2, lineWidth, lineHeight, 1)
-            else
-                image.fillRect(lineWidth * i, config.viewportHeight / 2 - lineHeight / 2, lineWidth, lineHeight, 13)
-
+            let lineHeight = (tileSize / this.rays[i].lenght) * this.viewDistance
+            let startY = config.viewportHeight / 2 - lineHeight / 2
+            if(config.textures) {
+                for (let j = 0; j < tileSize; j++) {
+                    if (this.rays[i].horizontalhit)
+                        image.fillRect(lineWidth * i, startY + (j * (lineHeight / tileSize)), lineWidth, Math.floor(lineHeight/tileSize)+1,this.player.map.textures_h[1].getPixel(this.rays[i].x%tileSize,j))
+                    else
+                        image.fillRect(lineWidth * i, startY + (j * (lineHeight / tileSize)), lineWidth, Math.floor(lineHeight / tileSize) + 1, this.player.map.textures_v[1].getPixel(this.rays[i].y % tileSize, j))
+                }
+            } else {
+                if (this.rays[i].horizontalhit)
+                    image.fillRect(lineWidth * i, startY, lineWidth, lineHeight, 1)
+                else
+                    image.fillRect(lineWidth * i, startY, lineWidth, lineHeight, 13)
+            }
         }
     }
 }

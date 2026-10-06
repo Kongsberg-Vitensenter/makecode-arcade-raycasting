@@ -1,8 +1,10 @@
 class fpsMap {
-    map: int8[]
-    width: int8
-    height: int8
-    tileSize: int8
+    map: number[]
+    width: number
+    height: number
+    tileSize: number
+    textures_h: Image[]
+    textures_v: Image[]
 
     constructor(width: number, height: number, tileSize: number) {
         this.width = width

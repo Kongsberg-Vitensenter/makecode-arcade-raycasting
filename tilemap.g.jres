@@ -4,6 +4,18 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile1": {
+        "data": "hwQQABAAAADd3e3u3d3t7u3u7e7t7u3u7e7t7u3u7e7t7u3u7e7t7u3u3d3t7t3d7e7t7u3u7e7t7u3u7e7t7u3u7e7t7u3u3d3t7t3d7e7t7u3u7e7t7u3u7e7t7u3u7e7t7u3u7e7t7t3d7e7d3e3u7e7t7u3u7e7t7u3u7e7t7u3u7e7t7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "wall1_h"
+    },
+    "tile2": {
+        "data": "hwQQABAAAAC7u+vuu7vr7uvu6+7r7uvu6+7r7uvu6+7r7uvu6+7r7uvuu7vr7ru76+7r7uvu6+7r7uvu6+7r7uvu6+7r7uvuu7vr7ru76+7r7uvu6+7r7uvu6+7r7uvu6+7r7uvu6+7r7ru76+67u+vu6+7r7uvu6+7r7uvu6+7r7uvu6+7r7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "wall1_v"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

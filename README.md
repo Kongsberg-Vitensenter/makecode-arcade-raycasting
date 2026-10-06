@@ -3,14 +3,24 @@
  Experiments in raycasting with Makecode Arcade. 
  
 
- Untextured at the moment, seems to run without any noticeable lag on the 
+ Seems to run without any noticeable lag on the 
  Elecfreaks Retro Makecode Arcade for Education and the Kitronic ARCADE
- handheld consoles when casting 40 rays. Will start lagging on real hardware
- if you increase the ray count. If you are only using the Makecode Simulator
- you can increase the ray count to 160 without any lagging. Running on the
- simulator it should also be possible to increase the screen resolution as well.
- But to keep it running smoothly and correctly on actual hardware I reccomend 
+ handheld consoles when casting 40 rays. 
+ 
+
+ It will start lagging on real hardware if you increase the ray count substantially 
+ above 40. If you are only using the Makecode Simulator you can increase the ray count
+ to 160 without any lagging and increase the screen resolution as well.
+ 
+
+ But to keep it running smoothly and correctly on actual hardware I recommend 
  keeping the resolution default and the number of rays cast low.
+
+
+ There is also support for textures, using MakeCode tiles to define textures.
+ This feature works best when running on the simulator, as the screen resolution
+ on real hardware as well as the low ray count needed for it to run smoothly makes
+ the texture rendering not look good.
 
  ## How to Play
  * Move the player with the d-pad
